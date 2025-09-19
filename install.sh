@@ -286,6 +286,7 @@ EOF
 
     # 安装日志处理
     curl -o /usr/local/V2bX/V2bXlog.sh -Ls https://raw.githubusercontent.com/xybingbing/V2bX-script/master/V2bXlog.sh
+    chmod +x /usr/local/V2bX/V2bXlog.sh
     cat <<EOF > /etc/systemd/system/v2bx_log_monitor.service
 [Unit]
 Description=V2bX Log Monitor
