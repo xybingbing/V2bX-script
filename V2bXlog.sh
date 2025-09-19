@@ -45,7 +45,7 @@ do
     vmess_id=$(grep -oP "\]\K.*" <<< "$raw_user")
 
     # 格式化输出（使用缓存的公网 IP）
-    output="Time: ${datetime%.*} | Client: ${client_info} | Target: ${target_info} | VmessID: ${vmess_id} | Ip:$ip_address | Email: $user_email"
+    output="Time: ${datetime%.*} | Client: ${client_info} | Target: ${target_info} | VmessID: ${vmess_id} | Ip: ${ip_address} | Email: ${user_email}"
 
     # 动态日志文件名
     LOG_FILE="${LOG_DIR}/access_$(date +%Y%m%d).log"
